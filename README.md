@@ -28,7 +28,7 @@ clipboard, '\*', and primary, '+', registers if the *clipboard* option contains
 ```vim
 g:appendtoclip_leader
 ```
-The key used as the leader to the mappings. The default is *<Space>*.
+The key used as the leader to the mappings. The default is `<Space>`.
 
 ## License
 The AppendToClip plugin is released under Vim's license.
