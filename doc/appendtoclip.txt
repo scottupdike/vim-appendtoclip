@@ -1,0 +1,72 @@
+*appendtoclip.txt*                       Plugin for appending lines to registers
+
+
+                        AppendToClip REFERENCE MANUAL~
+
+
+
+
+
+==============================================================================
+CONTENTS                                                *AppendToClipContents*
+
+    1.Intro...................................|AppendToClip|
+    2.Installation............................|AppendToClipInstallation|
+    3.Functionality provided..................|AppendToClipFunctionality|
+    4.Options.................................|AppendToClipOptions|
+    5.Changelog...............................|AppendToClipChangelog|
+    6.License.................................|AppendToClipLicense|
+
+==============================================================================
+1. Intro                                                        *AppendToClip*
+
+The |AppendToClip| plugin lets you append to the default register, and the
+clipboard, and primary registers if the |clipboard| option contains 'unnamed'
+or 'unnamedplus'.
+
+==============================================================================
+2. Installation                                     *AppendToClipInstallation*
+
+Extract the plugin files in your ~/.vim (*nix) or ~/vimfiles (Windows). You
+should have 2 files: >
+    plugin/appendtoclip.vim
+    doc/appendtoclip.txt
+<
+Next, to finish installing the help file run: >
+    :helptags ~/.vim/doc
+
+Alternatively, and arguably preferably, use Pathogen and checkout the
+vim-appendtoclip directory in your bundle directory. Then, run: >
+    :Helptags
+
+==============================================================================
+3. Functionality provided                          *AppendToClipFunctionality*
+
+<Space>yy
+Append line(s) to the default register, '"'. Also append to the clipboard,
+'*', and primary, '+', registers if the |clipboard| option contains 'unnamed'
+and 'unnamedplus', respectively.
+
+
+<Space>dd
+Delete and append line(s) to the default register, '"'. Also append to the
+clipboard, '*', and primary, '+', registers if the |clipboard| option contains
+'unnamed' and 'unnamedplus', respectively.
+
+==============================================================================
+4. Options                                               *AppendToClipOptions*
+
+*g:appendtoclip_leader*
+The key used as the leader to the mappings. The default is '<Space>'.
+
+==============================================================================
+5. Changelog                                           *AppendToClipChangelog*
+
+1.0.0
+    - initial version
+
+==============================================================================
+6. License                                               *AppendToClipLicense*
+
+The AppendToClip plugin is released under Vim's |license|.
+
