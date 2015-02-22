@@ -74,6 +74,8 @@ The key used as the leader to the mappings. The default is '<Space>'.
     - initial version
 1.0.1
     - improved documentation
+1.0.2
+    - ignore error when vim-repeat plugin is not installed
 
 ==============================================================================
 6. License                                               *AppendToClipLicense*
