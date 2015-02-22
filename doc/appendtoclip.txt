@@ -1,28 +1,29 @@
 *appendtoclip.txt*                       Plugin for appending lines to registers
 
 
-                        AppendToClip REFERENCE MANUAL~
-
-
-
+                              AppendToClip HELP
 
 
 ==============================================================================
 CONTENTS                                                *AppendToClipContents*
 
-    1.Intro...................................|AppendToClip|
+    1.Summary.................................|AppendToClip|
     2.Installation............................|AppendToClipInstallation|
-    3.Functionality provided..................|AppendToClipFunctionality|
+    3.Functionality...........................|AppendToClipFunctionality|
     4.Options.................................|AppendToClipOptions|
     5.Changelog...............................|AppendToClipChangelog|
     6.License.................................|AppendToClipLicense|
 
 ==============================================================================
-1. Intro                                                        *AppendToClip*
+1. Summary                                                      *AppendToClip*
 
-The |AppendToClip| plugin lets you append to the default register, and the
-clipboard, and primary registers if the |clipboard| option contains 'unnamed'
-or 'unnamedplus'.
+Have you ever wanted to yank or copy one line at a time from various parts
+of a file and be able to paste the accumulated results in one operation?
+Sure, you can do this using named registers using the uppercase letter, but
+it is cumbersome and unnatural.  The |AppendToClip| plugin lets you append to
+the default register (and the clipboard, and primary registers if the
+*clipboard* option contains 'unnamed' or 'unnamedplus') in a natural and easy
+way.
 
 ==============================================================================
 2. Installation                                     *AppendToClipInstallation*
@@ -40,7 +41,7 @@ vim-appendtoclip directory in your bundle directory. Then, run: >
     :Helptags
 
 ==============================================================================
-3. Functionality provided                          *AppendToClipFunctionality*
+3. Functionality                                   *AppendToClipFunctionality*
 
 <Space>yy
 Append line(s) to the default register, '"'. Also append to the clipboard,
@@ -53,6 +54,13 @@ Delete and append line(s) to the default register, '"'. Also append to the
 clipboard, '*', and primary, '+', registers if the |clipboard| option contains
 'unnamed' and 'unnamedplus', respectively.
 
+
+These mappings work in both normal and visual mode and take a count just like
+the built in commands |dd| and |yy|.
+
+If you have the vim-repeat plugin (https://github.com/tpope/vim-repeat)
+installed, you can repeat either of the above mappings with dot, '.'.
+
 ==============================================================================
 4. Options                                               *AppendToClipOptions*
 
@@ -64,6 +72,8 @@ The key used as the leader to the mappings. The default is '<Space>'.
 
 1.0.0
     - initial version
+1.0.1
+    - improved documentation
 
 ==============================================================================
 6. License                                               *AppendToClipLicense*
