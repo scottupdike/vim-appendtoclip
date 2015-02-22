@@ -14,11 +14,14 @@ function! <sid>ExecuteAppendToDefaultAndClipboard(is_visual, delete) range
         let @+=@z
     endif
     let @z=a:temp_z_reg
-    if a:delete
-        call repeat#set("\<Plug>AppendToDefaultAndClipboardDelete", v:count)
-    else
-        call repeat#set("\<Plug>AppendToDefaultAndClipboardYank", v:count)
-    endif
+    try
+        if a:delete
+            call repeat#set("\<Plug>AppendToDefaultAndClipboardDelete", v:count)
+        else
+            call repeat#set("\<Plug>AppendToDefaultAndClipboardYank", v:count)
+        endif
+    catch
+    endtry
 endfunction
 
 if !exists("g:appendtoclip_leader")
