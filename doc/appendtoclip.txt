@@ -1,7 +1,7 @@
 *appendtoclip.txt*                       Plugin for appending lines to registers
 
 
-                              AppendToClip HELP
+                      AppendToClip   (by Scott Updike)~
 
 
 ==============================================================================
@@ -73,9 +73,11 @@ The key used as the leader to the mappings. The default is '<Space>'.
 1.0.0
     - initial version
 1.0.1
-    - improved documentation
+    - improve documentation
 1.0.2
     - ignore error when vim-repeat plugin is not installed
+1.0.3
+    - remove unnecessary function parameter
 
 ==============================================================================
 6. License                                               *AppendToClipLicense*

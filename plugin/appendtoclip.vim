@@ -1,4 +1,4 @@
-function! <sid>ExecuteAppendToDefaultAndClipboard(is_visual, delete) range
+function! <sid>ExecuteAppendToDefaultAndClipboard(delete) range
     echo a:firstline . " " . a:lastline
     let a:temp_z_reg=@z
     let @z=@"
@@ -29,13 +29,13 @@ if !exists("g:appendtoclip_leader")
 endif
 
 nnoremap <silent> <Plug>AppendToDefaultAndClipboardYank 
-            \:call <sid>ExecuteAppendToDefaultAndClipboard(0, 0)<CR>
+            \:call <sid>ExecuteAppendToDefaultAndClipboard(0)<CR>
 xnoremap <silent> <Plug>AppendToDefaultAndClipboardYank 
-            \:call <sid>ExecuteAppendToDefaultAndClipboard(1, 0)<CR>
+            \:call <sid>ExecuteAppendToDefaultAndClipboard(0)<CR>
 nnoremap <silent> <Plug>AppendToDefaultAndClipboardDelete 
-            \:call <sid>ExecuteAppendToDefaultAndClipboard(0, 1)<CR>
+            \:call <sid>ExecuteAppendToDefaultAndClipboard(1)<CR>
 xnoremap <silent> <Plug>AppendToDefaultAndClipboardDelete 
-            \:call <sid>ExecuteAppendToDefaultAndClipboard(1, 1)<CR>
+            \:call <sid>ExecuteAppendToDefaultAndClipboard(1)<CR>
 execute 'nmap ' . g:appendtoclip_leader . 'yy <Plug>AppendToDefaultAndClipboardYank'
 execute 'xmap ' . g:appendtoclip_leader . 'yy <Plug>AppendToDefaultAndClipboardYank'
 execute 'nmap ' . g:appendtoclip_leader . 'dd <Plug>AppendToDefaultAndClipboardDelete'
