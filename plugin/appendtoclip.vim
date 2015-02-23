@@ -1,5 +1,4 @@
 function! <sid>ExecuteAppendToDefaultAndClipboard(delete) range
-    echo a:firstline . " " . a:lastline
     let a:temp_z_reg=@z
     let @z=@"
     execute "silent " . a:firstline . "," . a:lastline . "y Z"
