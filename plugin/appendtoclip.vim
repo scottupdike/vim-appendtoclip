@@ -1,5 +1,5 @@
 function! <sid>ExecuteAppendToDefaultAndClipboard(delete) range
-    let a:temp_z_reg=@z
+    let l:temp_z_reg=@z
     let @z=@"
     execute "silent " . a:firstline . "," . a:lastline . "y Z"
     if a:delete
@@ -12,7 +12,7 @@ function! <sid>ExecuteAppendToDefaultAndClipboard(delete) range
     if index(split(&clipboard, ','), 'unnamedplus') != -1
         let @+=@z
     endif
-    let @z=a:temp_z_reg
+    let @z=l:temp_z_reg
     try
         if a:delete
             call repeat#set("\<Plug>AppendToDefaultAndClipboardDelete", v:count)
